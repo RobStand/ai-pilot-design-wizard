@@ -68,3 +68,16 @@ mount only if `state.risks` is empty.
 - **Model id** is `claude-sonnet-4-6` in `app/api/pilot/route.ts`, per the project spec.
 - **PDF/clipboard** go through `lib/pdf-export.ts`; `html2pdf.js` is dynamically imported (browser-only)
   and typed by `types/html2pdf.d.ts`.
+
+## gstack
+
+This repo uses the [gstack](https://github.com/garrytan/gstack) skill suite. Use the **`/browse`**
+skill from gstack for **all web browsing**. **Never** use `mcp__claude-in-chrome__*` tools.
+
+Available gstack skills: `/office-hours`, `/plan-ceo-review`, `/plan-eng-review`,
+`/plan-design-review`, `/design-consultation`, `/design-shotgun`, `/design-html`, `/review`,
+`/ship`, `/land-and-deploy`, `/canary`, `/benchmark`, `/browse`, `/connect-chrome`, `/qa`,
+`/qa-only`, `/design-review`, `/setup-browser-cookies`, `/setup-deploy`, `/setup-gbrain`,
+`/retro`, `/investigate`, `/document-release`, `/document-generate`, `/codex`, `/cso`,
+`/autoplan`, `/plan-devex-review`, `/devex-review`, `/careful`, `/freeze`, `/guard`,
+`/unfreeze`, `/gstack-upgrade`, `/learn`.
