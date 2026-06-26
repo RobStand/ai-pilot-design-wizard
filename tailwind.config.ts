@@ -21,10 +21,13 @@ const config: Config = {
           line: "#e6e9ee",
         },
         accent: {
-          DEFAULT: "#2348ff",
-          soft: "#eef1ff",
-          ink: "#16267a",
+          DEFAULT: "#3551c9",
+          soft: "#eff1fb",
+          ink: "#243a96",
         },
+        success: "#1f9d57",
+        warning: "#c08a1e",
+        error: "#d23b2c",
       },
       fontFamily: {
         sans: ["var(--font-grotesk)", "ui-sans-serif", "system-ui", "sans-serif"],

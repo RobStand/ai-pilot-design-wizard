@@ -59,7 +59,8 @@ mount only if `state.risks` is empty.
 - **Styling:** Tailwind only, via the semantic component classes in `app/globals.css` (`.card`,
   `.btn-primary`, `.field-input`, `.help-panel`, `.doc`, `.seg`/`.seg-on`). Use theme tokens from
   `tailwind.config.ts` (`ink`, `paper`, `accent`) — do not introduce ad-hoc hex colors. Design language
-  is grotesk + mono, cool neutrals, single cobalt accent (`#2348ff`); no serif or warm-paper palettes.
+  is grotesk + mono, cool neutrals, single slate-cobalt accent (`#3551c9`); no serif or warm-paper palettes.
+  See `DESIGN.md` for the full design system (source of truth) before any UI change.
 - **`"use client"`** on every interactive component (all of `components/**`, the wizard/results/landing
   pages). The only server module is `app/api/pilot/route.ts` (`runtime = "nodejs"`).
 - **Generated HTML is rendered with `dangerouslySetInnerHTML`** after `cleanHtml()` in `app/results/page.tsx`
