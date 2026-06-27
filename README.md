@@ -92,6 +92,31 @@ npm run lint     # eslint (next/core-web-vitals)
 There is no test runner; `npm run build` is the validation gate — it type-checks every file
 and lints.
 
+## Deploy on Vercel
+
+This is a standard Next.js App Router app — Vercel auto-detects it. The only required config
+is the API key, added as an environment variable (never commit it; `.env.local` is gitignored
+and not deployed).
+
+1. Import the repo at [vercel.com/new](https://vercel.com/new).
+2. **Settings → Environment Variables**, add:
+   - **Key:** `ANTHROPIC_API_KEY`
+   - **Value:** your `sk-ant-...` key
+   - **Environments:** Production, Preview, and Development
+3. Deploy (or **redeploy** if you added the key after the first build — env vars only apply to
+   builds created after they're set).
+
+Or via the CLI:
+
+```bash
+vercel env add ANTHROPIC_API_KEY production   # paste the key; repeat for preview/development
+vercel --prod
+```
+
+The key is read server-side in `app/api/pilot/route.ts` and never reaches the browser. Keep the
+name exactly `ANTHROPIC_API_KEY`, and do **not** prefix it with `NEXT_PUBLIC_` (that would leak
+it into the client bundle).
+
 ## How it works
 
 1. Work through the 8 steps at `/wizard`. Required fields gate the Next button; the desktop
